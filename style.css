@@ -139,6 +139,7 @@ form{
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-top: 5px;
 }
 .edit{
     width: 50%;
@@ -160,4 +161,8 @@ form{
 }
 button{
     cursor: pointer;
+}
+.catatan{
+    display: flex;
+    gap: 20px;
 }
