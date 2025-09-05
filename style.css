@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    font-family: arial, 'times new roman';
+}
+#kolom-pengisian{
+    background-color: antiquewhite;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.kotak-pengisian{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(208, 198, 176);
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.judul h2{
+    padding-bottom: 5px;
+    border-bottom: 3px solid white;
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.kotak{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.judul-form{
+    width: 70%;
+    height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 0;
+    outline: 0;
+    padding-left: 20px;
+}
+.warna{
+    width: 30%;
+    height: 40px;
+    background-color: white;
+    border: 0;
+    outline: 0;
+    padding: 5px;
+}
+.judul::placeholder{
+    font-weight: bold;
+}
+.isi-notes{
+    width: 100%;
+    height: 100px;
+    font-family: arial, 'times new roman';
+    padding: 20px;
+    border: 0;
+    outline: 0;
+    resize: none;
+}
+.file{
+    width: 50%;
+    height: 40px;
+    padding-left: 20px;
+    border: 0;
+    outline: 0;
+}
+.submit{
+    width: 50%;
+    background-color: rgb(79, 79, 79);
+    border: 0;
+    outline: 0;
+    color: white;
+    font-family: arial, 'times new roman';
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 10px;
+    border-radius: 0 20px 20px 0;
+}
+.catatan{
+    width: 70%;
+    font-size: 12px;
+}
+#kolom-data{
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.N-kotak{
+    background-color: aquamarine;
+    width: 30%;
+    height: max-content;
+    max-height: 500px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 300ms ease-in-out;
+    overflow: hidden;
+}
+.N-kotak:hover{
+    transform: scale(1.1);
+    transition: 300ms ease-in-out;
+}
+.N-judul{
+    text-align: center;
+}
+.N-gambar{
+    object-fit: cover;
+    width: 200px;
+    height: 100px;
+    border-radius: 5px;
+}
+.N-isi{
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.double-button{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.edit{
+    width: 50%;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(113, 177, 113);
+    font-weight: bold;
+    color: white;
+}
+.remove{
+    width: 50%;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(196, 117, 88);
+    font-weight: bold;
+    color: white;
+}
+button{
+    cursor: pointer;
+}
