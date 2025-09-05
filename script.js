@@ -6,9 +6,9 @@ const buttonSubmit = document.getElementById("submit");
 const kolom = document.getElementById("kolom-data");
 
 //step 2
-let notes = JSON.parse(localStorage.getItem('notes')) || [];
+let notes = JSON.parse(localStorage.getItem("notes")) || [];
 function saveNotes() {
-    localStorage.setItem('notes', JSON.stringify(notes));
+  localStorage.setItem("notes", JSON.stringify(notes));
 }
 
 function renderNotes() {
@@ -29,7 +29,7 @@ function renderNotes() {
           <button data-id="${data.id}" class="remove">remove</button>
         </div>`;
     if (data.image == "") {
-        div.querySelector(".N-gambar").remove();
+      div.querySelector(".N-gambar").remove();
     }
 
     kolom.appendChild(div);
@@ -64,29 +64,29 @@ buttonSubmit.addEventListener("click", () => {
 });
 
 //step 4
-kolom.addEventListener('click', (event) => {
+kolom.addEventListener("click", (event) => {
   const target = event.target;
 
   //edit button
-  if (target.classList.contains('edit')) {
-    const idEdit = parseInt(target.getAttribute('data-id'));
-    const idFind = notes.find(notes => notes.id === idEdit)
+  if (target.classList.contains("edit")) {
+    const idEdit = parseInt(target.getAttribute("data-id"));
+    const idFind = notes.find((notes) => notes.id === idEdit);
     if (idFind.id == idEdit) {
       judul.value = idFind.judul;
       warna.value = idFind.color;
       isi.value = idFind.isi;
       file.value = idFind.image;
     }
-    notes = notes.filter(notes => notes.id !== idEdit);
+    notes = notes.filter((notes) => notes.id !== idEdit);
     saveNotes();
-    renderNotes()
+    renderNotes();
   }
 
   //remove button
-  if (target.classList.contains('remove')) {
-    const idRemove = parseInt(target.getAttribute('data-id'));
-    notes = notes.filter(notes => notes.id !== idRemove)
+  if (target.classList.contains("remove")) {
+    const idRemove = parseInt(target.getAttribute("data-id"));
+    notes = notes.filter((notes) => notes.id !== idRemove);
     saveNotes();
-    renderNotes()
+    renderNotes();
   }
-})
+});
