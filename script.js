@@ -4,7 +4,6 @@ const isi = document.getElementById("isi-notes");
 const file = document.getElementById("file");
 const buttonSubmit = document.getElementById("submit");
 const kolom = document.getElementById("kolom-data");
-
 //step 2
 let notes = JSON.parse(localStorage.getItem("notes")) || [];
 function saveNotes() {
@@ -82,7 +81,7 @@ function renderNotes() {
     if (data.color == "black" || "#000000") {
       div.style.color = "white";
     }
-    div.innerHTML = `<h2 class="N-judul">${data.judul}</h2>
+    div.innerHTML = `</i></i><h2 class="N-judul">${data.judul}</h2>
         <img class='N-gambar' src="${data.image}" alt="">
         <p class="N-isi">${data.isi}</p>
         <div class="double-button">
