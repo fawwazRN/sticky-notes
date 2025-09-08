@@ -134,6 +134,7 @@ form{
     width: 100%;
     overflow-y: scroll;
     scrollbar-width: none;
+    white-space: pre-line;
 }
 .double-button{
     display: flex;

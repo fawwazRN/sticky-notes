@@ -11,6 +11,67 @@ function saveNotes() {
   localStorage.setItem("notes", JSON.stringify(notes));
 }
 
+//bolding
+isi.addEventListener("keydown", function(e) {
+  if (e.ctrlKey && e.key.toLowerCase() === "b") {
+    e.preventDefault(); // cegah browser default (bold semua halaman)
+
+    const start = this.selectionStart;
+    const end = this.selectionEnd;
+    const text = this.value;
+
+    if (start !== end) {
+      // bungkus teks yang dipilih dengan <b></b>
+      const before = text.substring(0, start);
+      const selected = text.substring(start, end);
+      const after = text.substring(end);
+
+      this.value = before + "<b>" + selected + "</b>" + after;
+    }
+  }
+});
+
+//italic
+isi.addEventListener("keydown", function(e) {
+  if (e.ctrlKey && e.key.toLowerCase() === "i") {
+    e.preventDefault(); // cegah browser default (bold semua halaman)
+
+    const start = this.selectionStart;
+    const end = this.selectionEnd;
+    const text = this.value;
+
+    if (start !== end) {
+      // bungkus teks yang dipilih dengan <b></b>
+      const before = text.substring(0, start);
+      const selected = text.substring(start, end);
+      const after = text.substring(end);
+
+      this.value = before + "<i>" + selected + "</i>" + after;
+    }
+  }
+});
+
+//underline
+isi.addEventListener("keydown", function(e) {
+  if (e.ctrlKey && e.key.toLowerCase() === "u") {
+    e.preventDefault(); // cegah browser default (bold semua halaman)
+
+    const start = this.selectionStart;
+    const end = this.selectionEnd;
+    const text = this.value;
+
+    if (start !== end) {
+      // bungkus teks yang dipilih dengan <b></b>
+      const before = text.substring(0, start);
+      const selected = text.substring(start, end);
+      const after = text.substring(end);
+
+      this.value = before + "<u>" + selected + "</u>" + after;
+    }
+  }
+});
+
+
 function renderNotes() {
   kolom.innerHTML = "";
   notes.forEach((data) => {
